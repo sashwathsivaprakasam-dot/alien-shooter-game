@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Alien Shooter Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        <div id="hud">
+            <div id="score">Score: 0</div>
+            <div id="lives">Lives: 3</div>
+            <div id="level">Level: 1</div>
+        </div>
+        
+        <!-- Mobile Controls -->
+        <div id="mobileControls">
+            <div id="touchArea"></div>
+            <button id="shootBtn" class="shoot-button">SHOOT</button>
+        </div>
+        
+        <div id="gameOver" class="hidden">
+            <h1>GAME OVER</h1>
+            <p id="finalScore">Final Score: 0</p>
+            <button onclick="location.reload()">Play Again</button>
+        </div>
+        <div id="bossAlert" class="hidden">
+            <h2>🔴 BOSS ALIEN APPROACHING! 🔴</h2>
+        </div>
+        <div id="levelComplete" class="hidden">
+            <h2>LEVEL COMPLETE!</h2>
+            <p id="levelScore">Score: 0</p>
+            <button onclick="nextLevel()">Next Level</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
